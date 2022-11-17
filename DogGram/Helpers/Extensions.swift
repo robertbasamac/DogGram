@@ -12,7 +12,7 @@ extension Color {
     
     struct MyTheme {
         static var purpleColor: Color {
-            return Color("PurpleColor")
+            return Color("ColorPurple")
         }
         
         static var yellowCollor: Color {
