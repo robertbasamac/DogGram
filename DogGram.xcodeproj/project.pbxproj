@@ -18,6 +18,8 @@
 		09BCEAD029264E1C00F9BFD9 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEACF29264E1C00F9BFD9 /* PostModel.swift */; };
 		09BCEAD22926500600F9BFD9 /* PostArrayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEAD12926500600F9BFD9 /* PostArrayObject.swift */; };
 		09BCEAD429265E3700F9BFD9 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEAD329265E3700F9BFD9 /* CommentsView.swift */; };
+		09BCEAD62926610F00F9BFD9 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEAD52926610F00F9BFD9 /* MessageView.swift */; };
+		09BCEAD82926620500F9BFD9 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEAD72926620500F9BFD9 /* CommentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		09BCEACF29264E1C00F9BFD9 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		09BCEAD12926500600F9BFD9 /* PostArrayObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostArrayObject.swift; sourceTree = "<group>"; };
 		09BCEAD329265E3700F9BFD9 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		09BCEAD52926610F00F9BFD9 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		09BCEAD72926620500F9BFD9 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				09BCEACC29264A1800F9BFD9 /* PostView.swift */,
+				09BCEAD52926610F00F9BFD9 /* MessageView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			children = (
 				09BCEACF29264E1C00F9BFD9 /* PostModel.swift */,
 				09BCEAD12926500600F9BFD9 /* PostArrayObject.swift */,
+				09BCEAD72926620500F9BFD9 /* CommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,9 +208,11 @@
 				09BCEACB292649A400F9BFD9 /* FeedView.swift in Sources */,
 				09BCEAD029264E1C00F9BFD9 /* PostModel.swift in Sources */,
 				09338F50292569F6009A4114 /* ContentView.swift in Sources */,
+				09BCEAD62926610F00F9BFD9 /* MessageView.swift in Sources */,
 				09338F62292575D6009A4114 /* Extensions.swift in Sources */,
 				09BCEAD22926500600F9BFD9 /* PostArrayObject.swift in Sources */,
 				09BCEACD29264A1800F9BFD9 /* PostView.swift in Sources */,
+				09BCEAD82926620500F9BFD9 /* CommentModel.swift in Sources */,
 				09BCEAD429265E3700F9BFD9 /* CommentsView.swift in Sources */,
 				09338F4E292569F6009A4114 /* DogGramApp.swift in Sources */,
 			);
