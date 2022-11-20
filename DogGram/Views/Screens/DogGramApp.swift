@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+ @main
 struct DogGramApp: App {
     var body: some Scene {
         WindowGroup {

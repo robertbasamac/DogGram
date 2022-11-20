@@ -6,13 +6,23 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct UploadView: View {
+    
+    @State var showIamgePicker: Bool = false
+    
+    @State var imageSelected: [PhotosPickerItem] = []
+    @State var selectedImage: UIImage = UIImage(named: "logo")!
+    
+    @State var sourceType: UIImagePickerController.SourceType = .camera
+    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
                 Button {
-                    
+                    sourceType = .camera
+                    showIamgePicker.toggle()
                 } label: {
                     Text("Take photo".uppercased())
                         .font(.largeTitle)
@@ -22,8 +32,18 @@ struct UploadView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .background(Color.MyTheme.purpleColor)
                 
+//                PhotosPicker(selection: $imageSelected, maxSelectionCount: 1, selectionBehavior: .default, matching: .images, preferredItemEncoding: .automatic) {
+//                    Text("Import photo".uppercased())
+//                        .font(.largeTitle)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color.MyTheme.purpleColor)
+//                }
+//                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+//                .background(Color.MyTheme.yellowCollor)
+                
                 Button {
-                    
+                    sourceType = .photoLibrary
+                    showIamgePicker.toggle()
                 } label: {
                     Text("Import photo".uppercased())
                         .font(.largeTitle)
@@ -34,6 +54,9 @@ struct UploadView: View {
                 .background(Color.MyTheme.yellowCollor)
             }
             .clipped()
+            .sheet(isPresented: $showIamgePicker) {
+                ImagePicker(imageSelected: $selectedImage, sourceType: $sourceType)
+            }
             
             Image("logo.transparent")
                 .resizable()
