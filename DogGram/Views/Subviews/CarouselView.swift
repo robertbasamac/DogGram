@@ -44,8 +44,6 @@ struct CarouselView: View {
                 } else {
                     selection += 1
                 }
-                
-                print(selection)
             }
         }
         

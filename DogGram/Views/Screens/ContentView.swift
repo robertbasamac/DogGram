@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            FeedView(posts: PostArrayObject())
+            FeedView(posts: PostArrayObject(), title: "Feed View")
                 .tabItem {
                     Label("Feed", systemImage: "book.fill")
                 }
