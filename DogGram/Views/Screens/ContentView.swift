@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Feed", systemImage: "book.fill")
                 }
             
-            Text("Screen 2")
+            BrowseView()
                 .tabItem {
                     Label("Browse", systemImage: "magnifyingglass")
                 }
