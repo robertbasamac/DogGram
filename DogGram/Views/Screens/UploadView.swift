@@ -12,10 +12,12 @@ struct UploadView: View {
     
     @State var showIamgePicker: Bool = false
     
-    @State var imageSelected: [PhotosPickerItem] = []
-    @State var selectedImage: UIImage = UIImage(named: "logo")!
+//    @State var imageSelected: [PhotosPickerItem] = []
+    @State var imageSelected: UIImage = UIImage(named: "logo")!
     
     @State var sourceType: UIImagePickerController.SourceType = .camera
+    
+    @State var showPostImageView: Bool = false
     
     var body: some View {
         ZStack {
@@ -54,8 +56,10 @@ struct UploadView: View {
                 .background(Color.MyTheme.yellowCollor)
             }
             .clipped()
-            .sheet(isPresented: $showIamgePicker) {
-                ImagePicker(imageSelected: $selectedImage, sourceType: $sourceType)
+            .sheet(isPresented: $showIamgePicker, onDismiss: {
+                showPostImageView.toggle()
+            }) {
+                ImagePicker(imageSelected: $imageSelected, sourceType: $sourceType)
             }
             
             Image("logo.transparent")
@@ -64,6 +68,9 @@ struct UploadView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .shadow(color: Color.MyTheme.yellowCollor, radius: 15, x: 0, y: -5)
                 .shadow(color: Color.MyTheme.purpleColor, radius: 15, x: 0, y: 5)
+                .fullScreenCover(isPresented: $showPostImageView) {
+                    PostImageView(imageSelected: $imageSelected)
+                }
 
         }
         .edgesIgnoringSafeArea(.top)

@@ -25,6 +25,7 @@
 		09C0155E292A398D0051DC73 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0155D292A398D0051DC73 /* ImageGridView.swift */; };
 		09C01560292A3E780051DC73 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0155F292A3E780051DC73 /* UploadView.swift */; };
 		09C01562292A50230051DC73 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C01561292A50230051DC73 /* ImagePicker.swift */; };
+		09C01564292AA9440051DC73 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C01563292AA9440051DC73 /* PostImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		09C0155D292A398D0051DC73 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		09C0155F292A3E780051DC73 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		09C01561292A50230051DC73 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		09C01563292AA9440051DC73 /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				09BCEAD329265E3700F9BFD9 /* CommentsView.swift */,
 				09C01559292A30F60051DC73 /* BrowseView.swift */,
 				09C0155F292A3E780051DC73 /* UploadView.swift */,
+				09C01563292AA9440051DC73 /* PostImageView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				09BCEACB292649A400F9BFD9 /* FeedView.swift in Sources */,
 				09BCEAD029264E1C00F9BFD9 /* PostModel.swift in Sources */,
+				09C01564292AA9440051DC73 /* PostImageView.swift in Sources */,
 				09338F50292569F6009A4114 /* ContentView.swift in Sources */,
 				09BCEAD62926610F00F9BFD9 /* MessageView.swift in Sources */,
 				09338F62292575D6009A4114 /* Extensions.swift in Sources */,
