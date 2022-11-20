@@ -23,6 +23,7 @@
 		09C0155A292A30F60051DC73 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C01559292A30F60051DC73 /* BrowseView.swift */; };
 		09C0155C292A319C0051DC73 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0155B292A319C0051DC73 /* CarouselView.swift */; };
 		09C0155E292A398D0051DC73 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0155D292A398D0051DC73 /* ImageGridView.swift */; };
+		09C01560292A3E780051DC73 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0155F292A3E780051DC73 /* UploadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		09C01559292A30F60051DC73 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		09C0155B292A319C0051DC73 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		09C0155D292A398D0051DC73 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		09C0155F292A3E780051DC73 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				09BCEACA292649A400F9BFD9 /* FeedView.swift */,
 				09BCEAD329265E3700F9BFD9 /* CommentsView.swift */,
 				09C01559292A30F60051DC73 /* BrowseView.swift */,
+				09C0155F292A3E780051DC73 /* UploadView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				09C0155A292A30F60051DC73 /* BrowseView.swift in Sources */,
 				09BCEAD82926620500F9BFD9 /* CommentModel.swift in Sources */,
 				09BCEAD429265E3700F9BFD9 /* CommentsView.swift in Sources */,
+				09C01560292A3E780051DC73 /* UploadView.swift in Sources */,
 				09C0155C292A319C0051DC73 /* CarouselView.swift in Sources */,
 				09338F4E292569F6009A4114 /* DogGramApp.swift in Sources */,
 			);

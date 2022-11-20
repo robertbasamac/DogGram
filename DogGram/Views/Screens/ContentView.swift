@@ -20,7 +20,7 @@ struct ContentView: View {
                     Label("Browse", systemImage: "magnifyingglass")
                 }
             
-            Text("Screen 3")
+            UploadView()
                 .tabItem {
                     Label("Upload", systemImage: "square.and.arrow.up.fill")
                 }
