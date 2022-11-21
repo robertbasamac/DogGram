@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State var profileDisplayName: String
+    var profileUserID: String
+    var isMyProfile: Bool
+    
+    var posts: PostArrayObject = PostArrayObject()
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
-                ProfileHeaderView()
+                ProfileHeaderView(profileDisplayName: $profileDisplayName)
+                
+                Divider()
+                
+                ImageGridView(posts: posts)
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
@@ -23,14 +34,15 @@ struct ProfileView: View {
                         Image(systemName: "line.horizontal.3")
                     }
                     .tint(Color.MyTheme.purpleColor)
+                    .opacity(isMyProfile ? 1 : 0)
                 }
             }
         }
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {    
     static var previews: some View {
-        ProfileView()
+        ProfileView(profileDisplayName: "Joe", profileUserID: "", isMyProfile: true)
     }
 }
