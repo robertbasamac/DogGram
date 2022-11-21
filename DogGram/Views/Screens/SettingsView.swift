@@ -47,7 +47,12 @@ struct SettingsView: View {
 
                     }
 
-                    SettingsRowView(leftIcon: "photo", text: "Profile Picture", color: Color.MyTheme.purpleColor)
+                    NavigationLink {
+                        SettingsEditImageView(title: "Profile Picture", description: "Your profile picture will be shown on your profile and on your posts. Most users make it an image of themselves or of their dog.", selectedImage: UIImage(named: "dog1")!)
+                    } label: {
+                        SettingsRowView(leftIcon: "photo", text: "Profile Picture", color: Color.MyTheme.purpleColor)
+                    }
+
                     SettingsRowView(leftIcon: "figure.walk", text: "Sign Out", color: Color.MyTheme.purpleColor)
 
                 } label: {
@@ -57,10 +62,23 @@ struct SettingsView: View {
 
                 // MARK: Application
                 GroupBox {
-                    SettingsRowView(leftIcon: "folder.fill", text: "Privacy Policy", color: Color.MyTheme.yellowCollor)
-                    SettingsRowView(leftIcon: "folder.fill", text: "Terms & Conditions", color: Color.MyTheme.yellowCollor)
-                    SettingsRowView(leftIcon: "globe", text: "DogGram's Website", color: Color.MyTheme.yellowCollor)
+                    Button {
+                        openCustomUrl(urlString: "https://www.google.com/")
+                    } label: {
+                        SettingsRowView(leftIcon: "folder.fill", text: "Privacy Policy", color: Color.MyTheme.yellowCollor)
+                    }
 
+                    Button {
+                        openCustomUrl(urlString: "https://www.yahoo.com/")
+                    } label: {
+                        SettingsRowView(leftIcon: "folder.fill", text: "Terms & Conditions", color: Color.MyTheme.yellowCollor)
+                    }
+
+                    Button {
+                        openCustomUrl(urlString: "https://www.bing.com/")
+                    } label: {
+                        SettingsRowView(leftIcon: "globe", text: "DogGram's Website", color: Color.MyTheme.yellowCollor)
+                    }
                 } label: {
                     SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
                 }
@@ -83,11 +101,20 @@ struct SettingsView: View {
                         dimiss()
                     } label: {
                         Image(systemName: "xmark")
-                            .font(.title)
+                            .font(.title2)
                     }
                     .tint(.primary)
                 }
             }
+        }
+    }
+    
+    // MARK: Functions
+    private func openCustomUrl(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
         }
     }
 }

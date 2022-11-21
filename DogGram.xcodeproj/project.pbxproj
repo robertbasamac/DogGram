@@ -27,6 +27,7 @@
 		09C01562292A50230051DC73 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C01561292A50230051DC73 /* ImagePicker.swift */; };
 		09C01564292AA9440051DC73 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C01563292AA9440051DC73 /* PostImageView.swift */; };
 		09C94FEF292C0410009BA20E /* SettingsEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C94FEE292C0410009BA20E /* SettingsEditTextView.swift */; };
+		09C94FF1292C0988009BA20E /* SettingsEditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C94FF0292C0988009BA20E /* SettingsEditImageView.swift */; };
 		09F5EC56292BA7A200BB89D1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5EC55292BA7A200BB89D1 /* ProfileView.swift */; };
 		09F5EC58292BA85100BB89D1 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5EC57292BA85100BB89D1 /* ProfileHeaderView.swift */; };
 		09F5EC5A292BAC6F00BB89D1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5EC59292BAC6F00BB89D1 /* SettingsView.swift */; };
@@ -56,6 +57,7 @@
 		09C01561292A50230051DC73 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		09C01563292AA9440051DC73 /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		09C94FEE292C0410009BA20E /* SettingsEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditTextView.swift; sourceTree = "<group>"; };
+		09C94FF0292C0988009BA20E /* SettingsEditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditImageView.swift; sourceTree = "<group>"; };
 		09F5EC55292BA7A200BB89D1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		09F5EC57292BA85100BB89D1 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		09F5EC59292BAC6F00BB89D1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				09F5EC55292BA7A200BB89D1 /* ProfileView.swift */,
 				09F5EC59292BAC6F00BB89D1 /* SettingsView.swift */,
 				09C94FEE292C0410009BA20E /* SettingsEditTextView.swift */,
+				09C94FF0292C0988009BA20E /* SettingsEditImageView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				09F5EC56292BA7A200BB89D1 /* ProfileView.swift in Sources */,
 				09C0155A292A30F60051DC73 /* BrowseView.swift in Sources */,
 				09BCEAD82926620500F9BFD9 /* CommentModel.swift in Sources */,
+				09C94FF1292C0988009BA20E /* SettingsEditImageView.swift in Sources */,
 				09BCEAD429265E3700F9BFD9 /* CommentsView.swift in Sources */,
 				09F5EC58292BA85100BB89D1 /* ProfileHeaderView.swift in Sources */,
 				09C01560292A3E780051DC73 /* UploadView.swift in Sources */,

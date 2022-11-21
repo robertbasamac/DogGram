@@ -15,6 +15,8 @@ struct ProfileView: View {
     
     var posts: PostArrayObject = PostArrayObject()
     
+    @State var showSettings: Bool = false
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -29,13 +31,16 @@ struct ProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        
+                        showSettings.toggle()
                     } label: {
                         Image(systemName: "line.horizontal.3")
                     }
                     .tint(Color.MyTheme.purpleColor)
                     .opacity(isMyProfile ? 1 : 0)
                 }
+            }
+            .sheet(isPresented: $showSettings) {
+                SettingsView()
             }
         }
     }

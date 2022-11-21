@@ -19,7 +19,7 @@ struct PostImageView: View {
                 dimiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.title)
+                    .font(.title2)
                     .padding()
             }
             .tint(.primary)
