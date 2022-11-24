@@ -42,7 +42,7 @@ struct SignUpView: View {
             }
             .tint(Color.MyTheme.yellowCollor)
         }
-        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding([.bottom, .horizontal], 40)
         .background(Color.MyTheme.yellowCollor)
         .clipped()
