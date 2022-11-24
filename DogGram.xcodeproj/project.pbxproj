@@ -13,6 +13,7 @@
 		09338F55292569F7009A4114 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09338F54292569F7009A4114 /* Preview Assets.xcassets */; };
 		09338F5C29256DE8009A4114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09338F5B29256DE8009A4114 /* LaunchScreen.storyboard */; };
 		09338F62292575D6009A4114 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09338F61292575D6009A4114 /* Extensions.swift */; };
+		09A457E8292FFB810046CA2C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A457E7292FFB810046CA2C /* SignUpView.swift */; };
 		09BCEACB292649A400F9BFD9 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEACA292649A400F9BFD9 /* FeedView.swift */; };
 		09BCEACD29264A1800F9BFD9 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEACC29264A1800F9BFD9 /* PostView.swift */; };
 		09BCEAD029264E1C00F9BFD9 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCEACF29264E1C00F9BFD9 /* PostModel.swift */; };
@@ -43,6 +44,7 @@
 		09338F54292569F7009A4114 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09338F5B29256DE8009A4114 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09338F61292575D6009A4114 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		09A457E7292FFB810046CA2C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		09BCEACA292649A400F9BFD9 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		09BCEACC29264A1800F9BFD9 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		09BCEACF29264E1C00F9BFD9 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				09F5EC59292BAC6F00BB89D1 /* SettingsView.swift */,
 				09C94FEE292C0410009BA20E /* SettingsEditTextView.swift */,
 				09C94FF0292C0988009BA20E /* SettingsEditImageView.swift */,
+				09A457E7292FFB810046CA2C /* SignUpView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				09BCEAD029264E1C00F9BFD9 /* PostModel.swift in Sources */,
 				09F5EC5C292BADB100BB89D1 /* SettingsLabelView.swift in Sources */,
 				09C01564292AA9440051DC73 /* PostImageView.swift in Sources */,
+				09A457E8292FFB810046CA2C /* SignUpView.swift in Sources */,
 				09338F50292569F6009A4114 /* ContentView.swift in Sources */,
 				09BCEAD62926610F00F9BFD9 /* MessageView.swift in Sources */,
 				09338F62292575D6009A4114 /* Extensions.swift in Sources */,
