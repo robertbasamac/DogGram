@@ -33,11 +33,11 @@ struct PostImageView: View {
                     .cornerRadius(12)
                     .clipped()
                 
-                TextField("", text: $captioNText)
-                    .placeholder(shouldShow: captioNText.isEmpty, placeholder: {
-                        Text("Add your caption...")
-                            .opacity(0.3)
-                    })
+                TextField("Add your caption...", text: $captioNText)
+//                    .placeholder(shouldShow: captioNText.isEmpty, placeholder: {
+//                        Text("Add your caption...")
+//                            .opacity(0.3)
+//                    })
                     .font(.headline)
                     .foregroundColor(Color.MyTheme.purpleColor)
                     .padding()

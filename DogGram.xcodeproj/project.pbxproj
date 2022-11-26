@@ -36,6 +36,7 @@
 		09F5EC5A292BAC6F00BB89D1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5EC59292BAC6F00BB89D1 /* SettingsView.swift */; };
 		09F5EC5C292BADB100BB89D1 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5EC5B292BADB100BB89D1 /* SettingsLabelView.swift */; };
 		09F5EC5E292BAF1F00BB89D1 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5EC5D292BAF1F00BB89D1 /* SettingsRowView.swift */; };
+		09FCB4C629326F9900F34809 /* OnboardingViewPart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FCB4C529326F9900F34809 /* OnboardingViewPart2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		09F5EC59292BAC6F00BB89D1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		09F5EC5B292BADB100BB89D1 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
 		09F5EC5D292BAF1F00BB89D1 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		09FCB4C529326F9900F34809 /* OnboardingViewPart2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPart2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				09C94FF0292C0988009BA20E /* SettingsEditImageView.swift */,
 				09A457E7292FFB810046CA2C /* SignUpView.swift */,
 				09A457E9293000FC0046CA2C /* OnboardingView.swift */,
+				09FCB4C529326F9900F34809 /* OnboardingViewPart2.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				09338F4E292569F6009A4114 /* DogGramApp.swift in Sources */,
 				09F5EC5A292BAC6F00BB89D1 /* SettingsView.swift in Sources */,
 				09C94FEF292C0410009BA20E /* SettingsEditTextView.swift in Sources */,
+				09FCB4C629326F9900F34809 /* OnboardingViewPart2.swift in Sources */,
 				09F5EC5E292BAF1F00BB89D1 /* SettingsRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

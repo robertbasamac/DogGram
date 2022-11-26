@@ -19,11 +19,11 @@ struct SettingsEditTextView: View {
             Text(description)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            TextField("", text: $submissionText)
-                .placeholder(shouldShow: submissionText.isEmpty, placeholder: {
-                    Text(placeholder)
-                        .opacity(0.3)
-                })
+            TextField(placeholder, text: $submissionText)
+//                .placeholder(shouldShow: submissionText.isEmpty, placeholder: {
+//                    Text(placeholder)
+//                        .opacity(0.3)
+//                })
                 .font(.headline)
                 .foregroundColor(Color.MyTheme.purpleColor)
                 .padding()
