@@ -42,6 +42,7 @@ struct SettingsEditImageView: View {
             .tint(Color.MyTheme.purpleColor)
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(imageSelected: $selectedImage, sourceType: $sourceType)
+                    .edgesIgnoringSafeArea(.bottom)
             }
             
             Button {

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.colorScheme) private var colorScheme
+    
     var currentUserID: String? = nil
     
     var body: some View {
@@ -40,7 +42,7 @@ struct ContentView: View {
             }
             
         }
-        .tint(Color.MyTheme.purpleColor)
+        .tint(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
     }
 }
 

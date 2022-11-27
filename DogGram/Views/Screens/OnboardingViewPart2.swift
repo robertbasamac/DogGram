@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OnboardingViewPart2: View {
     
+    @Environment(\.colorScheme) private var colorScheme
+    
     @State var displayName: String = ""
     @State var showImagePicker: Bool = false
     
@@ -62,6 +64,8 @@ struct OnboardingViewPart2: View {
             createProfile()
         } content: {
             ImagePicker(imageSelected: $imageSelected, sourceType: $sourceType)
+                .edgesIgnoringSafeArea(.bottom)
+                .tint(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
         }
     }
     

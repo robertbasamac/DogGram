@@ -9,6 +9,8 @@ import SwiftUI
 import PhotosUI
 
 struct UploadView: View {
+
+    @Environment(\.colorScheme) private var colorScheme
     
     @State var showIamgePicker: Bool = false
     
@@ -60,6 +62,8 @@ struct UploadView: View {
                 showPostImageView.toggle()
             }) {
                 ImagePicker(imageSelected: $imageSelected, sourceType: $sourceType)
+                    .edgesIgnoringSafeArea(.bottom)
+                    .tint(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
             }
             
             Image("logo.transparent")

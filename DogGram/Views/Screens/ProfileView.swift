@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @Environment(\.colorScheme) private var colorScheme
     @State var profileDisplayName: String
     var profileUserID: String
     var isMyProfile: Bool
@@ -35,7 +36,7 @@ struct ProfileView: View {
                     } label: {
                         Image(systemName: "line.horizontal.3")
                     }
-                    .tint(Color.MyTheme.purpleColor)
+                    .tint(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
                     .opacity(isMyProfile ? 1 : 0)
                 }
             }
@@ -43,6 +44,7 @@ struct ProfileView: View {
                 SettingsView()
             }
         }
+        .tint(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
     }
 }
 

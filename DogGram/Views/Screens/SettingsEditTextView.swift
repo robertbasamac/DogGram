@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsEditTextView: View {
+    
+    @Environment(\.colorScheme) private var colorScheme
 
     @State var submissionText: String = ""
     @State var title: String
@@ -25,11 +27,11 @@ struct SettingsEditTextView: View {
 //                        .opacity(0.3)
 //                })
                 .font(.headline)
-                .foregroundColor(Color.MyTheme.purpleColor)
+                .foregroundColor(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
                 .padding()
                 .frame(height: 60)
                 .frame(maxWidth: .infinity)
-                .background(Color.MyTheme.beigeColor)
+                .background(colorScheme == .light ? Color.MyTheme.beigeColor : Color.MyTheme.purpleColor)
                 .cornerRadius(12)
                 .textInputAutocapitalization(.sentences)
             
@@ -42,10 +44,10 @@ struct SettingsEditTextView: View {
                     .padding()
                     .frame(height: 60)
                     .frame(maxWidth: .infinity)
-                    .background(Color.MyTheme.purpleColor)
+                    .background(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
                     .cornerRadius(12)
             }
-            .tint(Color.MyTheme.yellowCollor)
+            .tint(colorScheme == .light ? Color.MyTheme.yellowCollor : Color.MyTheme.purpleColor)
 
             Spacer()
         }

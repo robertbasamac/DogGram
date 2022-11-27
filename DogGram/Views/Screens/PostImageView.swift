@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PostImageView: View {
     @Environment(\.dismiss) private var dimiss
+    @Environment(\.colorScheme) private var colorScheme
     
     @State private var captioNText: String = ""
     @Binding var imageSelected: UIImage
@@ -43,7 +44,7 @@ struct PostImageView: View {
                     .padding()
                     .frame(height: 60)
                     .frame(maxWidth: .infinity)
-                    .background(Color.MyTheme.beigeColor)
+                    .background(colorScheme == .light ? Color.MyTheme.beigeColor : Color.MyTheme.purpleColor)
                     .cornerRadius(12)
                     .padding(.horizontal)
                     .textInputAutocapitalization(.sentences)
@@ -57,11 +58,11 @@ struct PostImageView: View {
                         .padding()
                         .frame(height: 60)
                         .frame(maxWidth: .infinity)
-                        .background(Color.MyTheme.purpleColor)
+                        .background(colorScheme == .light ? Color.MyTheme.purpleColor : Color.MyTheme.yellowCollor)
                         .cornerRadius(12)
                         .padding(.horizontal)
                 }
-                .tint(Color.MyTheme.yellowCollor)
+                .tint(colorScheme == .light ? Color.MyTheme.yellowCollor : Color.MyTheme.purpleColor)
             }
         }
     }
