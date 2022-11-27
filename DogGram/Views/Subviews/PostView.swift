@@ -10,10 +10,14 @@ import SwiftUI
 struct PostView: View {
     
     @State var post: PostModel
+    @State var postIamge: Image = Image("dog1")
     var showHeaderAndFooter: Bool
     
     @State var animateLike: Bool = false
     @State var addHeartAnimationToView: Bool
+    
+    @State var showActionSheet: Bool = false
+    @State var showReportOptions: Bool = false
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -38,15 +42,62 @@ struct PostView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "ellipsis")
-                        .font(.headline)
+                    Button {
+                        showActionSheet.toggle()
+                    } label: {
+                        Image(systemName: "ellipsis")
+                            .font(.headline)
+                    }
+                    .confirmationDialog("What would you liek to do?", isPresented: $showActionSheet, actions: {
+                        Button(role: .destructive) {
+                            showReportOptions.toggle()
+                        } label: {
+                            Text("Report")
+                        }
+                        
+                        Button {
+                            print("LEARN MORE")
+                        } label: {
+                            Text("Learn more...")
+                        }
+                    }, message: {
+                        Text("What would you liek to do?")
+                    })
+                    .confirmationDialog("Why are you reporting this sheet?", isPresented: $showReportOptions) {
+                        Button(role: .destructive) {
+                             reportPost(reason: "This is ainapropriate!")
+                        } label: {
+                            Text("This is inappropriate!")
+                        }
+                        
+                        Button(role: .destructive) {
+                             reportPost(reason: "This is spam!")
+                        } label: {
+                            Text("This is spam!")
+                        }
+                        
+                        Button(role: .destructive) {
+                             reportPost(reason: "It made me uncomfortable!")
+                        } label: {
+                            Text("It made me uncomfortable!")
+                        }
+                        
+                        Button(role: .cancel) {
+                            showActionSheet.toggle()
+                        } label: {
+                            Text("Cancel")
+                        }
+                    } message: {
+                        Text("Why are you reporting this sheet?")
+                    }
+                    .tint(.primary)
                 }
                 .padding(6)
             }
             
             // MARK: Image
             ZStack {
-                Image("dog1")
+                postIamge
                     .resizable()
                     .scaledToFit()
                 
@@ -75,8 +126,13 @@ struct PostView: View {
                         Image(systemName: "bubble.middle.bottom")
                             .foregroundColor(.primary)
                     }
+                    
+                    let link = URL(string: "https://www.google.com")!
 
-                    Image(systemName: "paperplane")
+                    ShareLink(item: postIamge, message: Text("Check this out!\n\(link)"), preview: SharePreview("Check out this post on DogGram!", image: postIamge)) {
+                        Image(systemName: "paperplane")
+                    }
+                    .tint(.primary)
                 }
                 .font(.title3)
                 .padding(6)
@@ -105,6 +161,24 @@ struct PostView: View {
     private func unlikePost() {
         let updatedPost = PostModel(id: post.id, postID: post.postID, userID: post.userID, username: post.username, caption: post.caption, dateCreated: post.dateCreated, likeCount: post.likeCount - 1, likedByUser: false)
         self.post = updatedPost
+    }
+    
+    private func reportPost(reason: String) {
+        print("REPORT POST NOW - reason \(reason)")
+    }
+    
+    private func sharePost() {
+        let message = "Check out this post on DogGram!"
+        let image = postIamge
+        let link = URL(string: "https://www.google.com")!
+        
+        let activityViewController = UIActivityViewController(activityItems: [message, image, link], applicationActivities: nil)
+        
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScenes = scenes.first as? UIWindowScene
+        let viewController = windowScenes?.windows.first?.rootViewController
+        
+        viewController?.present(activityViewController, animated: true)
     }
 }
 
